@@ -10,7 +10,7 @@ function test() {
     
 function authUser() {
 
-    alert("Hola, looking good!");
+    alert("Holas, looking good!");
     
     xmlToSubmit = "<user>";
     xmlToSubmit += "<username>" + document.getElementById('username').value + "</username>";
@@ -37,8 +37,8 @@ function authUser() {
             console.log("Token is " + token + " for user " + user);
 
             //Store user token and userid
-            localStorage["msp_token"] = token;
-            localStorage["msp_userid"] = $(xml).find('id').text();
+            //localStorage["msp_token"] = token;
+            //localStorage["msp_userid"] = $(xml).find('id').text();
 
             //Set default symbolset
             //  alert("Symbolset is " + $(xml).find('default_symbolset').text());
@@ -76,7 +76,7 @@ function authUser() {
     
     
 </script>
-<script src="jquery-1.8.1.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <title>Sign In</title>
 </head>
 <body>
