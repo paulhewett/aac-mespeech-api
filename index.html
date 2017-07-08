@@ -2,15 +2,8 @@
 <html>
 <head>
 <script>
-    
-function test() {
-    
-    alert("HEllo there");
-}    
-    
+      
 function authUser() {
-
-    alert("Hola, looking good!");
     
     xmlToSubmit = "<user>";
     xmlToSubmit += "<username>" + document.getElementById('username').value + "</username>";
@@ -18,9 +11,6 @@ function authUser() {
     xmlToSubmit += "</user>";
 
     $.ajax({
-        //cache: false,
-        //crossDomain: true,
-        //async: false,
         headers: {
             'apikey': 'asdqwe123'
         },
@@ -36,13 +26,6 @@ function authUser() {
             var user = $(xml).find('id').text(); // Store token for subsequent requests
 
             console.log("Token is " + token + " for user " + user);
-
-            //Store user token and userid
-            //localStorage["msp_token"] = token;
-            //localStorage["msp_userid"] = $(xml).find('id').text();
-
-            //Set default symbolset
-            //  alert("Symbolset is " + $(xml).find('default_symbolset').text());
 
             switch ($(xml).find('default_symbolset').text()) {
 
