@@ -19,11 +19,12 @@ function authUser() {
 
     $.ajax({
         //cache: false,
-        crossDomain: true,
+        //crossDomain: true,
         //async: false,
         headers: {
             'apikey': 'asdqwe123'
         },
+	contentType: 'text/plain',
         url: 'https://mespee.ch/api/auth',
         type: 'POST',
         data: {
