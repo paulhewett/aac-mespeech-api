@@ -1,4 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
 <script>
@@ -10,7 +9,8 @@ function test() {
     
 function authUser() {
 
-    alert("HI there, looking good!")
+    alert("HI there, looking good!");
+    
     xmlToSubmit = "<user>";
     xmlToSubmit += "<username>" + document.getElementById('username').value + "</username>";
     xmlToSubmit += "<password>" + document.getElementById('password').value + "</password>";
@@ -23,7 +23,7 @@ function authUser() {
         headers: {
             'apikey': 'asdqwe123'
         },
-        url: 'http://mespee.ch/api/auth',
+        url: 'https://mespee.ch/api/auth',
         type: 'POST',
         data: {
             data: xmlToSubmit
@@ -120,7 +120,7 @@ Updated
         <p>You need to sign in to access your online <br />content. You will only need to do this once.</p>
         <input id="username" type="text" value="Username" /><br />
         <input id="password" type="password" value="Password" /><br />
-	    <button id="authenticate" onclick="test()">Sign In</button>
+	    <button id="authenticate" onclick="authUser()">Sign In</button>
     </div>
 </div>
 </body>
