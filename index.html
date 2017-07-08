@@ -10,7 +10,7 @@ function test() {
     
 function authUser() {
 
-    alert("HI there, looking good!");
+    alert("Hola, looking good!");
     
     xmlToSubmit = "<user>";
     xmlToSubmit += "<username>" + document.getElementById('username').value + "</username>";
@@ -59,40 +59,6 @@ function authUser() {
                     break;
 
             }
-
-            //TODO - REINSTATE THIS
-            //localStorage["msp_preferredSs"] = preferredSs;
-
-            //console.log("Signed in");
-
-            //Do a first run to set some other values
-            //firstRun();
-
-            /*
-            var q = 'uservocabularies/' + localStorage["msp_userid"];
-            //TEST REQUEST
-            console.log("About to do the test");
-            $.ajax({
-
-            //crossDomain: true,
-            async: false,
-            type: "GET",
-            headers: {
-            'apikey': 'asdqwe123',
-            'token': localStorage["msp_token"]
-            },
-            url: "http://mespee.ch/api/" + q,
-            success: function (xml) {
-
-            console.log("Done the test");
-            },
-            error: function (xhr) {
-            xml = xhr.responseXML; // complete XmlHttpRequest object returned
-            console.log("Error doing the test");
-            }
-            });
-
-            */
 
             console.log("Signed in");
             redirectPage("/pages/options/options.html");
